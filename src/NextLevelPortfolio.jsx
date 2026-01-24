@@ -163,51 +163,85 @@ export default function NextLevelPortfolio() {
       <div className="fixed top-0 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
       <div className="fixed bottom-0 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
 
-      <nav className="fixed w-full z-40 bg-slate-950/50 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-lg md:text-xl overflow-hidden group">
-              <span className="relative z-10">PS</span>
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <div>
-              <div className="font-bold text-sm md:text-base">Priyanshu Srivastava</div>
-              <div className="text-xs text-gray-400">Full Stack Developer</div>
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center gap-4 lg:gap-6">
-            <a href="#projects" className="text-sm hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#skills" className="text-sm hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#certifications" className="text-sm hover:text-blue-400 transition-colors">Certifications</a>
-            <a href="mailto:priyanshusrivastava318@gmail.com" 
-               className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
-              Contact             
-            </a>
-            <a href="/Priyanshu_Srivastava_CV.pdf" download className="px-4 py-2 text-sm bg-white/5 backdrop-blur-xl border border-white/10 rounded-full hover:bg-white/10 transition-all flex items-center gap-2">
-              <Download className="w-3 h-3" />
-              CV
-            </a>
-          </div>
-
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+      <nav className="fixed w-full z-40 bg-slate-950/80 backdrop-blur-xl border-b border-white/10">
+  <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
+    <div className="flex justify-between items-center">
+      <div className="flex items-center gap-2 md:gap-3">
+        <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-lg md:text-xl">
+          <span>PS</span>
         </div>
+        <div className="hidden sm:block">
+          <div className="font-bold text-sm md:text-base">Priyanshu Srivastava</div>
+          <div className="text-xs text-gray-400">Full Stack Developer</div>
+        </div>
+      </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/5">
-            <div className="px-4 py-3 space-y-2">
-              <a href="#projects" onClick={() => setIsMenuOpen(false)} className="block py-2 text-sm hover:text-blue-400">Projects</a>
-              <a href="#skills" onClick={() => setIsMenuOpen(false)} className="block py-2 text-sm hover:text-blue-400">Skills</a>
-              <a href="#certifications" onClick={() => setIsMenuOpen(false)} className="block py-2 text-sm hover:text-blue-400">Certifications</a>
-              <a href="mailto:priyanshusrivastava318@gmail.com" className="block py-2 text-sm hover:text-blue-400">Contact</a>
-              <a href="/Priyanshu_Srivastava_CV.pdf" download className="block py-2 text-sm hover:text-blue-400">Download CV</a>
-            </div>
-          </div>
-        )}
-      </nav>
+      <div className="hidden md:flex items-center gap-4 lg:gap-6">
+        <a href="#projects" className="text-sm hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#skills" className="text-sm hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#certifications" className="text-sm hover:text-blue-400 transition-colors">Certifications</a>
+        <a href="mailto:priyanshusrivastava318@gmail.com" 
+           className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+          Contact             
+        </a>
+        <a href="/Priyanshu_Srivastava_CV.pdf" download 
+           className="px-4 py-2 text-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all flex items-center gap-2">
+          <Download className="w-3 h-3" />
+          CV
+        </a>
+      </div>
 
+      <button 
+        className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors" 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+    </div>
+  </div>
+
+  {isMenuOpen && (
+    <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10">
+      <div className="px-4 py-4 space-y-1">
+        <a 
+          href="#projects" 
+          onClick={() => setIsMenuOpen(false)} 
+          className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
+        >
+          Projects
+        </a>
+        <a 
+          href="#skills" 
+          onClick={() => setIsMenuOpen(false)} 
+          className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
+        >
+          Skills
+        </a>
+        <a 
+          href="#certifications" 
+          onClick={() => setIsMenuOpen(false)} 
+          className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
+        >
+          Certifications
+        </a>
+        <a 
+          href="mailto:priyanshusrivastava318@gmail.com" 
+          className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
+        >
+          Contact
+        </a>
+        <a 
+          href="/Priyanshu_Srivastava_CV.pdf" 
+          download 
+          className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
+        >
+          Download CV
+        </a>
+      </div>
+    </div>
+  )}
+</nav>
       <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-20 md:pt-24">
         <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 md:mb-6 animate-bounce">
