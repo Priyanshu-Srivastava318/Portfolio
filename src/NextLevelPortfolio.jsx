@@ -166,33 +166,52 @@ export default function NextLevelPortfolio() {
       <nav className="fixed w-full z-40 bg-slate-950/80 backdrop-blur-xl border-b border-white/10">
   <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
     <div className="flex justify-between items-center">
-      <div className="flex items-center gap-2 md:gap-3">
-        <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-lg md:text-xl">
-          <span>PS</span>
-        </div>
-        <div className="hidden sm:block">
-          <div className="font-bold text-sm md:text-base">Priyanshu Srivastava</div>
-          <div className="text-xs text-gray-400">Full Stack Developer</div>
-        </div>
-      </div>
 
+      {/* LEFT : NAME (CLICKABLE → TOP) */}
+      <a
+        href="#top"
+        className="flex flex-col leading-tight cursor-pointer select-none"
+      >
+        <span className="text-sm md:text-base font-bold text-white hover:text-blue-400 transition-colors">
+          Priyanshu Srivastava
+        </span>
+        <span className="text-[11px] md:text-xs text-gray-400">
+          Full Stack Developer
+        </span>
+      </a>
+
+      {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-4 lg:gap-6">
-        <a href="#projects" className="text-sm hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#skills" className="text-sm hover:text-blue-400 transition-colors">Skills</a>
-        <a href="#certifications" className="text-sm hover:text-blue-400 transition-colors">Certifications</a>
-        <a href="mailto:priyanshusrivastava318@gmail.com" 
-           className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
-          Contact             
+        <a href="#projects" className="text-sm hover:text-blue-400 transition-colors">
+          Projects
         </a>
-        <a href="/Priyanshu_Srivastava_CV.pdf" download 
-           className="px-4 py-2 text-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all flex items-center gap-2">
-          <Download className="w-3 h-3" />
+        <a href="#skills" className="text-sm hover:text-blue-400 transition-colors">
+          Skills
+        </a>
+        <a href="#certifications" className="text-sm hover:text-blue-400 transition-colors">
+          Certifications
+        </a>
+
+        <a
+          href="mailto:priyanshusrivastava318@gmail.com"
+          className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:shadow-lg hover:shadow-blue-500/40 transition-all"
+        >
+          Contact
+        </a>
+
+        <a
+          href="/Priyanshu_Srivastava_CV.pdf"
+          download
+          className="px-4 py-2 text-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all flex items-center gap-2"
+        >
+          <Download className="w-4 h-4" />
           CV
         </a>
       </div>
 
-      <button 
-        className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors" 
+      {/* MOBILE MENU BUTTON */}
+      <button
+        className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
@@ -201,39 +220,40 @@ export default function NextLevelPortfolio() {
     </div>
   </div>
 
+  {/* MOBILE MENU */}
   {isMenuOpen && (
     <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10">
       <div className="px-4 py-4 space-y-1">
-        <a 
-          href="#projects" 
-          onClick={() => setIsMenuOpen(false)} 
+        <a
+          href="#projects"
+          onClick={() => setIsMenuOpen(false)}
           className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
         >
           Projects
         </a>
-        <a 
-          href="#skills" 
-          onClick={() => setIsMenuOpen(false)} 
+        <a
+          href="#skills"
+          onClick={() => setIsMenuOpen(false)}
           className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
         >
           Skills
         </a>
-        <a 
-          href="#certifications" 
-          onClick={() => setIsMenuOpen(false)} 
+        <a
+          href="#certifications"
+          onClick={() => setIsMenuOpen(false)}
           className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
         >
           Certifications
         </a>
-        <a 
-          href="mailto:priyanshusrivastava318@gmail.com" 
+        <a
+          href="mailto:priyanshusrivastava318@gmail.com"
           className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
         >
           Contact
         </a>
-        <a 
-          href="/Priyanshu_Srivastava_CV.pdf" 
-          download 
+        <a
+          href="/Priyanshu_Srivastava_CV.pdf"
+          download
           className="block py-3 px-4 text-sm hover:bg-white/5 rounded-lg transition-colors"
         >
           Download CV
@@ -242,7 +262,12 @@ export default function NextLevelPortfolio() {
     </div>
   )}
 </nav>
-      <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-20 md:pt-24">
+
+      <section
+  id="top"
+  className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-20 md:pt-24"
+>
+
         <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 md:mb-6 animate-bounce">
             <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-blue-400" />
