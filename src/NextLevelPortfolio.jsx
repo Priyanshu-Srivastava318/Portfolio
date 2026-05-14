@@ -359,7 +359,7 @@ export default function Portfolio() {
         <div className="absolute bottom-0 left-0 right-0 fu5" style={{borderTop:'1px solid var(--border)'}}>
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
             <div className="mono text-[9px] tracking-[.18em] uppercase" style={{color:'var(--dim)'}}>
-              IMS Engineering College · CGPA 7.41 · 2022–2026
+              IMS Engineering College · CGPA 7.62 · 2022–2026
             </div>
             <div className="mono text-[9px] tracking-[.18em] uppercase hidden md:block flt" style={{color:'var(--dim)'}}>
               ↓ Scroll
