@@ -107,24 +107,29 @@ export default function Portfolio() {
   /* ── DATA ──────────────────────────────────────────────────────────────── */
   const experiences = [
     {
+      role: "Web Development Intern (Laravel/PHP)",
+      company: "TripLodge Universe", location: "Hotel Booking SaaS Platform", period: "Jul 2026 – Present",
+      points: ["Configured a full local dev environment (XAMPP, MySQL/MariaDB, Composer, PHP) for an existing Laravel hotel-management SaaS, independently resolving environment and database migration conflicts","Designed and built admin panel modules — Hotels, Users, Bookings, OTA Monitoring, Settlements, Reports, Settings — using Laravel's MVC architecture, matching the existing Tailwind CSS design system","Implemented search/filter, approval workflows, and paginated data tables while debugging route, model, and view-resolution issues using Laravel's stack traces"]
+    },
+    {
       role: "MERN Stack with GenAI Intern",
       company: "ShapeMySkills by Ducat", location: "Noida", period: "Jul – Aug 2025",
-      points: ["Built 3+ full-stack modules using React, Node.js, MongoDB & GenAI APIs — improved API response times and system reliability","Cut deployment debugging time by 35% via optimised build workflows","Reduced API integration errors by 25% through automated regression test cycles"]
+      points: ["Built 3+ full-stack modules using React, Node.js, MongoDB & GenAI APIs — cut API response time by 30% through query optimisation and caching","Cut deployment debugging time by 35% via optimised build-pipeline checks","Automated Jest regression tests, saving roughly 4 QA hours per sprint"]
     },
     {
       role: "Data Analyst Trainee",
       company: "Skillrisers Infotech Pvt. Ltd.", location: "Ghaziabad", period: "Jan – Feb 2024",
-      points: ["Improved documentation accuracy by 20% through requirement gathering and market mapping","Engineered reporting dashboards that slashed manual reporting time by 30%","Collaborated on UI workflows and product testing ensuring error-free releases"]
+      points: ["Migrated 4 spreadsheet-based reporting workflows to structured data pipelines, shrinking manual reporting time by 30% across 3 client projects","Conducted client requirement gathering, market mapping, and internal product testing","Delivered all engagements with zero post-launch defects"]
     }
   ];
 
   const projects = [
-    { num:"01", title:"BHARAT-Freelance", tag:"Marketplace · MERN", desc:"Full-stack freelance marketplace with Razorpay escrow payment pipeline eliminating fraud, ATS-powered candidate ranking, and 99.9% uptime handling 100+ daily requests.", impact:["95% fraud reduction","40% less resume bias","₹5–10L/mo scale"], tech:["React","Node.js","MongoDB","Razorpay","REST APIs"], github:"https://github.com/Priyanshu-Srivastava318/Bharat-Freelance", live:"https://bharat-freelance.vercel.app/" },
-    { num:"02", title:"INQUISITOR", tag:"SIEM · AI · Security", desc:"AI-integrated SIEM model letting analysts query security logs in natural language. ElasticSearch-based anomaly detection and real-time alert classification.", impact:["Natural language queries","AI anomaly detection","Real-time alerts"], tech:["PostgreSQL","Express","React","Node.js","ElasticSearch","AI APIs"], github:"https://github.com/Priyanshu-Srivastava318/Inquisitor", live:"https://inquisitor-model.vercel.app/" },
-    { num:"03", title:"LuminX", tag:"Image Enhancement · ML", desc:"Premium low-light image enhancement platform with drag-drop workflow, real-time preview, and modular Python ML backend. 1000+ images processed with 35% improved engagement.", impact:["1000+ images","35% engagement up","ML-ready"], tech:["React","Python","Tailwind","Vite"], github:"https://github.com/Priyanshu-Srivastava318/Lumin-X-Image-Enhancement-Model-", live:"https://lumin-x-eight.vercel.app/" },
-    { num:"04", title:"HairCare-AI", tag:"Healthcare · Diagnostics", desc:"AI diagnostic platform analysing 50+ hair conditions with 85% accuracy, generating personalised reports and serving 200+ active users.", impact:["85% accuracy","200+ users","50+ conditions"], tech:["React","Node.js","MongoDB","Python","AI/ML"], github:"https://github.com/Priyanshu-Srivastava318/Hairnet-AI", live:"https://haircare-ai.vercel.app/" },
-    { num:"05", title:"U-Craft", tag:"E-Commerce · Artists", desc:"Custom art ordering marketplace validated through 30+ stakeholder interviews, built for multi-city expansion with a premium dark UI.", impact:["30+ interviews","Multi-city ready","Premium UX"], tech:["React","Node.js","MongoDB","Express"], github:"https://github.com/Priyanshu-Srivastava318/U-Craft-MERN-Based", live:"https://u-craft-mern-based.vercel.app/" },
-    { num:"06", title:"HR Management System", tag:"Enterprise · HRMS", desc:"Comprehensive HRMS with attendance tracking, leave workflows, employee management and role-based JWT authentication. Built during internship.", impact:["Role-based auth","Attendance system","Leave workflows"], tech:["React","Node.js","MongoDB","JWT"], github:"https://github.com/Priyanshu-Srivastava318", live:null }
+    { num:"01", title:"BHARAT-Freelance", tag:"Marketplace · MERN", desc:"Full-stack freelance marketplace with role-based JWT authentication, Razorpay escrow payments, and an ATS-style candidate ranking engine — benchmarked to sustain 100+ daily requests.", impact:["50% less screening effort","100+ daily requests","Escrow payments"], tech:["React","Node.js","MongoDB","Razorpay","REST APIs"], github:"https://github.com/Priyanshu-Srivastava318/Bharat-Freelance", live:"https://bharat-freelance.vercel.app/" },
+    { num:"02", title:"INQUISITOR", tag:"SIEM · AI · Security", desc:"AI-powered SIEM assistant letting analysts query security logs in natural language. ElasticSearch-based indexing across 10,000+ daily log entries with real-time search.", impact:["10,000+ logs/day","30% faster response","Natural language search"], tech:["PostgreSQL","Express","React","Node.js","ElasticSearch","AI APIs"], github:"https://github.com/Priyanshu-Srivastava318/Inquisitor", live:"https://inquisitor-model.vercel.app/" },
+    { num:"03", title:"LuminX", tag:"Image Enhancement · ML", desc:"Low-light image enhancement platform with a drag-drop workflow, real-time preview, and a modular Python ML backend for inference.", impact:["5x faster inference","<30s processing","Real-time preview"], tech:["React","Python","Tailwind","Vite"], github:"https://github.com/Priyanshu-Srivastava318/Lumin-X-Image-Enhancement-Model-", live:"https://lumin-x-eight.vercel.app/" },
+    { num:"04", title:"HairCare-AI", tag:"Healthcare · Diagnostics", desc:"AI diagnostic platform with a trained ML model integrated into a modular MERN backend, generating personalised hair-care recommendations.", impact:["70% accuracy lift","ML diagnostics","Personalised reports"], tech:["React","Node.js","MongoDB","Python","AI/ML"], github:"https://github.com/Priyanshu-Srivastava318/Hairnet-AI", live:"https://haircare-ai.vercel.app/" },
+    { num:"05", title:"U-Craft", tag:"E-Commerce · Artists", desc:"Live multi-vendor art marketplace with Razorpay checkout and real-time order tracking, validated through 30+ stakeholder interviews and built for multi-city expansion.", impact:["50+ users, 10+ artists","30+ interviews","Multi-city ready"], tech:["React","Node.js","MongoDB","Express"], github:"https://github.com/Priyanshu-Srivastava318/U-Craft-MERN-Based", live:"https://www.u-craft.in/" },
+    { num:"06", title:"Jobify", tag:"Job Tracker · AI", desc:"Personalized job-application tracker with resume-to-job-description matching, a 100-point automated ATS scoring engine, and real-time application status tracking.", impact:["100-point ATS score","Real-time tracking","Resume matching"], tech:["React","Node.js","MongoDB","AI APIs"], github:"https://github.com/Priyanshu-Srivastava318/Jobify", live:"https://jobify-delta-three.vercel.app/" }
   ];
 
   const skills = [
@@ -133,17 +138,16 @@ export default function Portfolio() {
     { cat:"Languages", items:["JavaScript","Java","Python","SQL","C"] },
     { cat:"DevOps & Cloud", items:["Git / GitHub","Docker","AWS EC2 & S3","Vercel","Firebase","CI/CD","Render"] },
     { cat:"AI & Specialisations", items:["GenAI APIs","MERN Stack","ElasticSearch","AI/ML Integration","Performance Optimisation","Product Thinking"] },
+    { cat:"Additional", items:["PHP","Laravel","Blade","MySQL/MariaDB"] },
   ];
 
   const certs = [
-    { title:"AI Tools Workshop", org:"Be10x", date:"Feb 2026" },
+    { title:"React & Next.js with AI-Powered Projects", org:"Udemy", date:"Jul 2026" },
     { title:"AI for Business Essentials", org:"HP LIFE", date:"Jan 2026" },
-    { title:"Docker & Kubernetes", org:"Scaler", date:"Dec 2025" },
-    { title:"REACT Masterclass", org:"Scaler", date:"Dec 2025" },
-    { title:"Full Stack Web Dev", org:"Udemy", date:"Jun 2025" },
-    { title:"DSA in Java (150+ LC)", org:"Udemy", date:"2025" },
-    { title:"React Bootcamp", org:"LetsUpgrade", date:"2024" },
-    { title:"JavaScript & SQL", org:"LetsUpgrade", date:"2024" },
+    { title:"Docker & Kubernetes Fundamentals", org:"Scaler", date:"Dec 2025" },
+    { title:"React Masterclass", org:"Scaler", date:"Dec 2025" },
+    { title:"Full Stack Web Development", org:"Udemy", date:"2025" },
+    { title:"DSA in Java (150+ LeetCode)", org:"Udemy", date:"2025" },
   ];
 
   const navLinks = [
@@ -330,7 +334,7 @@ export default function Portfolio() {
               </p>
 
               <div className="grid grid-cols-2 gap-6">
-                {[{n:'6',s:'+',l:'Projects'},{n:'2',s:'',l:'Internships'},{n:'500',s:'+',l:'Users served'},{n:'150',s:'+',l:'LeetCode'}].map((st,i)=>(
+                {[{n:'6',s:'+',l:'Projects'},{n:'3',s:'',l:'Positions'},{n:'50',s:'+',l:'Users served'},{n:'150',s:'+',l:'LeetCode'}].map((st,i)=>(
                   <div key={i}>
                     <div className="serif font-light" style={{fontSize:'2.4rem',color:'var(--cream)',lineHeight:1}}>
                       <AnimNum n={st.n} suffix={st.s}/>
@@ -359,7 +363,7 @@ export default function Portfolio() {
         <div className="absolute bottom-0 left-0 right-0 fu5" style={{borderTop:'1px solid var(--border)'}}>
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
             <div className="mono text-[9px] tracking-[.18em] uppercase" style={{color:'var(--dim)'}}>
-              IMS Engineering College · CGPA 7.62 · 2022–2026
+              IMS Engineering College · CGPA 7.88 · 2022–2026
             </div>
             <div className="mono text-[9px] tracking-[.18em] uppercase hidden md:block flt" style={{color:'var(--dim)'}}>
               ↓ Scroll
@@ -371,8 +375,8 @@ export default function Portfolio() {
       {/* ── MARQUEE STRIP ───────────────────────────────────────────────────── */}
       <div className="overflow-hidden py-4" style={{borderTop:'1px solid var(--border)',borderBottom:'1px solid var(--border)',background:'var(--surface)'}}>
         <div className="marquee flex gap-16 whitespace-nowrap" style={{width:'max-content'}}>
-          {['React.js','Node.js','MongoDB','PostgreSQL','Docker','AWS','GenAI APIs','ElasticSearch','Razorpay','JWT','Tailwind CSS','Express.js','Python','REST APIs','Vercel',
-            'React.js','Node.js','MongoDB','PostgreSQL','Docker','AWS','GenAI APIs','ElasticSearch','Razorpay','JWT','Tailwind CSS','Express.js','Python','REST APIs','Vercel'
+          {['React.js','Node.js','MongoDB','PostgreSQL','Docker','AWS','GenAI APIs','ElasticSearch','Razorpay','JWT','Tailwind CSS','Express.js','Python','REST APIs','Vercel','PHP','Laravel',
+            'React.js','Node.js','MongoDB','PostgreSQL','Docker','AWS','GenAI APIs','ElasticSearch','Razorpay','JWT','Tailwind CSS','Express.js','Python','REST APIs','Vercel','PHP','Laravel'
           ].map((t,i)=>(
             <span key={i} className="mono text-[10px] tracking-[.2em] uppercase flex items-center gap-16" style={{color:'var(--dim)'}}>
               {t} <span style={{color:'var(--gold)'}}>·</span>
@@ -389,7 +393,7 @@ export default function Portfolio() {
               <div className="mono text-[10px] tracking-[.3em] uppercase mb-3" style={{color:'var(--gold)'}}>02 / Work</div>
               <h2 className="serif font-light" style={{fontSize:'clamp(2.5rem,6vw,5.5rem)'}}>Experience</h2>
             </div>
-            <div className="mono text-[10px] hidden md:block" style={{color:'var(--dim)'}}>2 Positions</div>
+            <div className="mono text-[10px] hidden md:block" style={{color:'var(--dim)'}}>3 Positions</div>
           </div>
 
           <div>
@@ -547,9 +551,12 @@ export default function Portfolio() {
           </div>
           <div data-rid="ach-g" className={r('ach-g','grid md:grid-cols-3 gap-0')}>
             {[
-              {n:'01',title:'Ideathon 2025 Winner',sub:'Melange Tech Fest — 1st place among 50+ competing teams'},
-              {n:'02',title:'National Top 10',sub:'Hackathon at COER Roorkee 2023 — nationally shortlisted'},
-              {n:'03',title:'Cultural Secretary',sub:'Leading 50+ members across 5 clubs at IMS Engineering College'},
+              {n:'01',title:'AIR 2051 — NCAT 2026',sub:'Ranked among 8,00,000+ participants nationwide'},
+              {n:'02',title:'Ideathon 2025 Winner',sub:'Melange Tech Fest — innovative tech-driven solution'},
+              {n:'03',title:'National Top 10',sub:'Hackathon at COER Roorkee — among 105 competing teams'},
+              {n:'04',title:'Vice President',sub:'Advitiya Cultural Society — promoted from Secretary, leading 50+ members across 5 clubs'},
+              {n:'05',title:'Founder, U-Craft',sub:'Scaled a student-led marketplace startup to 50+ users and 10+ onboarded artists'},
+              {n:'06',title:'Hackathon Participant',sub:'GL Bajaj Institute of Technology & Management'},
             ].map((a,i)=>(
               <div key={i} className="c-card p-8 md:p-10 cursor-default">
                 <div className="c-num mono text-[10px] tracking-widest mb-6 transition-colors duration-300" style={{color:'var(--dim)'}}>{a.n}</div>
